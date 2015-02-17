@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cosine question</title>
+<header align="center">Question 2</header>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<p>Select the cosine theorem formula.</p>
+<br>
+<form>
+<input type="radio" name="equation" value="1" onclick=0>
+
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow><mi>cos</mi><mo>&#x2061;</mo><mo>(</mo><mi>&alpha;</mi><mo>&plusmn;</mo><mi>&beta;</mi><mo>)</mo><mo>=</mo><mi>cos</mi><mi>&alpha;</mi><mi>cos</mi><mi>&beta;</mi><mo>&mp;</mo><mi>sin</mi><mi>&alpha;</mi><mi>sin</mi><mi>&beta;</mi></mrow>
+</math>
+</input>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="radio" name="equation" value="2" onclick=0>
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow><mi>sin</mi><mo>&#x2061;</mo><mo>(</mo><mi>&alpha;</mi><mo>&plusmn;</mo><mi>&beta;</mi><mo>)</mo><mo>=</mo><mi>sin</mi><mi>&alpha;</mi><mi>cos</mi><mi>&beta;</mi><mo>&plusmn;</mo><mi>cos</mi><mi>&alpha;</mi><mi>sin</mi><mi>&beta;</mi></mrow>
+</math>
+</input><br>
+<input type="radio" name="equation" value="3" onclick=0>
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow><mi>sin</mi><mi>&alpha;</mi><mo>+</mo><mi>sin</mi><mi>&beta;</mi><mo>=</mo><mn>2</mn>
+<mi>sin</mi><mo>&#x2061;</mo><mo>(</mo><mfrac><mrow><mi>&alpha;</mi><mo>+</mo><mi>&beta;</mi>
+</mrow><mrow><mn>2</mn></mrow></mfrac><mo>)</mo><mo>&#x2061;</mo><mi>cos</mi><mo>&#x2061;</mo>
+<mo>(</mo><mfrac><mrow>	<mi>&alpha;</mi><mo>&#x2212;</mo><mi>&beta;</mi></mrow>
+<mrow><mn>2</mn></mrow></mfrac><mo>)</mo></mrow>
+</math>
+</input>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="radio" name="equation" value="4" onclick=0>
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mrow><mi>sin</mi><mi>&alpha;</mi><mo>&#x2212;</mo><mi>sin</mi><mi>&beta;</mi><mo>=</mo><mn>2</mn>
+<mi>cos</mi><mo>&#x2061;</mo><mo>(</mo><mfrac><mrow><mi>&alpha;</mi><mo>+</mo><mi>&beta;</mi>
+</mrow><mrow><mn>2</mn></mrow></mfrac><mo>)</mo><mo>&#x2061;</mo><mi>sin</mi><mo>&#x2061;</mo>
+<mo>(</mo><mfrac><mrow>	<mi>&alpha;</mi><mo>&#x2212;</mo><mi>&beta;</mi></mrow>
+<mrow><mn>2</mn></mrow></mfrac><mo>)</mo></mrow>
+</math>
+</input><br>
+<footer>
+<input type="button" value="Submit and Next Question" onclick="myFunc(this.form)"/>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="button" value="Cancel and Clear Selection"/>
+</footer>
+</form>
+<script>
+var ans;
+function myFunc(form){
+	for(var i=0;i<4;i++){
+		if(document.getElementsByName("equation")[i].checked){
+			ans=document.getElementsByName("equation")[i].value;
+			if(ans==1){
+				var qpc='R';
+				var queryParm=document.URL;
+				var qp=queryParm.split("?");
+				location.href="englishSCOPage.html?"+qp[1]+"&"+qpc;
+			}else{
+				var qpc="W";
+				var queryParm=document.URL;
+				var qp=queryParm.split("?");
+				location.href="englishSCOPage.html?"+qp[1]+"&"+qpc;
+			}
+		
+		}
+	}
+}
+</script>
+</body>
+</html>
+
+
+
+
+
+<!--<script>
+var newArr=new Array();
+function navFunction(){
+	var wrd1=window.location.search.substring(1);
+	var wrd=wrd1.split('&');
+	for(var i=0;i<wrd.length;i++){
+	  var pos=wrd[i].indexOf("=");
+	  if(pos>0){
+		  var key=wrd[i].substring(0,pos);
+		  var val=wrd[i].substring(pos+1);
+		  newArr[key]=val;
+	  }
+	}
+}
+</script>  -->

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MathQuestion</title>
+<header align="center">Question 1</header>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<p>Given points (x1,y1) and (x2,y2) select the formula to find the equation of the 
+given line.</p>
+<br>
+<form>
+<input type="radio" name="equation" value="1" onclick=0>
+<mrow>
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mi>y</mi>
+<mo>=</mo>
+<mi>m</mi>
+<mi>x</mi>
+<mo>+</mo>
+<mi>c</mi>
+</mrow>
+</input>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="radio" name="equation"  value="2" onclick=0>
+<mrow>
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<msup>
+<mfenced>
+<mi>x</mi>
+<mo>&#x2212;</mo>
+<mi>h</mi>
+</mfenced>
+<mn>2</mn>
+</msup>
+<mo>+</mo>
+<msup>
+<mfenced>
+<mi>y</mi>
+<mo>&#x2212;</mo>
+<mi>k</mi>
+</mfenced>
+<mn>2</mn>
+</msup>
+<mo>=</mo>
+<msup>
+<mi>r</mi>
+<mn>2</mn>
+</msup>
+</math>
+</mrow>
+</input><br>
+<input type="radio" name="equation"  value ="3" onclick=0>
+<mrow>
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mi>y</mi>
+<mo>&#x2212;</mo>
+<msub><mi>y</mi><mn>1</mn></msub>
+<mo>=</mo>
+<mi>m</mi>
+<mfenced>
+<mrow>
+<mi>x</mi>
+<mo>&#x2212;</mo>
+<msub><mi>x</mi><mn>1</mn></msub>
+</mrow>
+</mfenced>
+</mrow>
+</input>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="radio" name="equation"  value="4" onclick=0>
+<mrow>
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='inline'>
+<mfenced>
+<mi>y</mi>
+<mo>&#x2212;</mo>
+<msub><mi>y</mi><mn>1</mn></msub>
+</mfenced>
+<mo>=</mo>
+<mfrac>
+<mrow><mfenced><msub><mi>y</mi><mn>2</mn></msub><mo>&#x2212;</mo><msub><mi>y</mi><mn>1</mn></msub></mfenced></mrow>
+<mrow><mfenced><msub><mi>x</mi><mn>2</mn></msub><mo>&#x2212;</mo><msub><mi>x</mi><mn>1</mn></msub></mfenced></mrow>
+</mfrac>
+<mrow>
+<mfenced>
+<mi>x</mi>
+<mo>&#x2212;</mo>
+<msub><mi>x</mi><mn>1</mn></msub>
+</mfenced>
+</mrow>
+</math>
+</mrow>
+</input><br>
+<footer>
+<input type="button" value="Submit and Next Question" onclick="myFunc(this.form)"/>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="button" value="Cancel and Clear Selection"/>
+</footer>
+</form>
+<script language="JavaScript">
+var ans;
+function myFunc(form){
+	for(var i=0;i<4;i++){
+		if(document.getElementsByName("equation")[i].checked){
+			ans=document.getElementsByName("equation")[i].value;
+			if(ans==4){
+				var qp='R';
+				location.href="cosinepage.html?"+qp;
+			}else{
+				var qpw='W';
+				location.href="cosinepage.html?"+qpw;
+			}
+			
+		}
+	}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Score Card</title>
+<header align="center">Score Card</header>
+</head>
+<body onload="myFunc(this)">
+<details>
+<summary>Quantitative Section</summary>
+Number Of Questions Answered: <b id="ans"></b><br>
+Number of correct Answers: <b id="ans1"></b><br>
+Score:  <b id="s1"></b><br>
+</details>
+<details>
+<summary>Reader Section</summary>
+Number Of Questions Answered: <b id="ans2"></b><br>
+Number of correct Answers: <b id="ans3"></b><br>
+Score: <b id="s2"></b><br>
+</details>
+<details>
+<summary>Audio/Video Section</summary>
+Number Of Questions Answered: <b id="ans4"></b><br>
+Number of correct Answers:<b id="ans5"></b> <br>
+Score:<b id="s3"></b><br>
+</details><br>
+<footer align="center">Thank You</footer>
+<script>
+function myFunc(body){
+	var wrd=document.URL;
+	var s=wrd.split('?');
+	var w=s[1].split('&');
+	for(var i=0;i<2;i++){
+		if(w[i]!=null && w[i]=='R'){
+			 document.getElementById('ans').innerHTML=(i+1);
+			 document.getElementById('ans1').innerHTML=(1+1);
+			 document.getElementById('s1').innerHTML=(i+1)*100;
+		}else{
+			document.getElementById('ans').innerHTML=c;
+			 document.getElementById('ans1').innerHTML='0';
+			 document.getElementById('s1').innerHTML='0';
+		}
+	}
+    if(w[2]!=null&&w[2]=='R^R'){
+    	document.getElementById('ans2').innerHTML='1';
+    	 document.getElementById('ans3').innerHTML='1';
+    	 document.getElementById('s2').innerHTML='100'; 
+    }else if(w[2]=='W^W'){
+    	document.getElementById('ans2').innerHTML='1';
+      	 document.getElementById('ans3').innerHTML='0';
+      	 document.getElementById('s2').innerHTML='0'; 
+    }else if(w[2]=='R^W'||w[2]=='W^R'){
+    	document.getElementById('ans2').innerHTML='1';
+     	 document.getElementById('ans3').innerHTML='0.5';
+     	 document.getElementById('s2').innerHTML='50'; 
+    }
+    if(w[3]!=null&&w[3]=='R'){
+    	document.getElementById('ans4').innerHTML='1';
+   	 document.getElementById('ans5').innerHTML='1';
+   	 document.getElementById('s3').innerHTML='100'; 
+    }else if(w[3]=='W'){
+    	document.getElementById('ans4').innerHTML='1';
+      	 document.getElementById('ans5').innerHTML='0';
+      	 document.getElementById('s3').innerHTML='0'; 
+    }
+	}
+</script>
+</body>
+</html>

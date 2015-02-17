@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Audio & Video SCO</title>
+<header align="center">Question 4</header>
+</head>
+<body>
+<form>
+<table>
+<tr>
+<td>
+<p>Watch the video and answer the following question.
+What is the source as mentioned in the video?</p>
+
+<input type="radio" name="equation" value="1" onclick=0>NASA.Gov</input>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="radio" name="equation" value="2" onclick=0>Data.Gov</input><br>
+<input type="radio" name="equation" value="3" onclick=0>Facebook</input>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="radio" name="equation" value="4" onclick=0>XYZ.net</input><br><br>
+
+<input type="button" value="Submit and Next Question" onclick="myFunc(this.form)"/>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="button" value="Cancel and Clear Selection"/>
+
+</td>
+<td><aside>
+ <iframe width="250" height="300"
+src="http://youtu.be/ToY4eeWsdLc">
+</iframe> 
+<br>
+<b>Expedition 40 Undocks Ending Mission</b>
+<p> Source:<a href="http://www.nasa.gov/multimedia/videogallery/index.html#VBF85S5dVOE">
+http://www.nasa.gov/multimedia/videogallery/index.html#VBF85S5dVOE
+</a></p></aside></td>
+</tr>
+</table>
+</form>
+<script>
+var ans;
+function myFunc(form){
+	for(var i=0;i<4;i++){
+		if(document.getElementsByName("equation")[i].checked){
+			ans=document.getElementsByName("equation")[i].value;
+			if(ans==1){
+				var qpAV='R';
+				var queryParm=document.URL;
+				var qp=queryParm.split("?");
+				location.href="SurvetSCO.html?"+qp[1]+"&"+qpAV;
+			}else{
+				var qpAV='W';
+				var queryParm=document.URL;
+				var qp=queryParm.split("?");
+				location.href="SurvetSCO.html?"+qp[1]+"&"+qpAV;
+			}
+			
+		}
+}
+}
+</script>
+</body>
+</html>

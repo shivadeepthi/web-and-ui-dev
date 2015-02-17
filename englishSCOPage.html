@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>English SCO</title>
+<header align="center">Question 3</header>
+</head>
+<body>
+<form>
+<table>
+<tr>
+<td>
+<p>As per the latest twitter news complete the article snippets given by selecting
+appropriate choices for the blanks</p><br>
+<table>
+<tr>
+<td><input type="radio" name="answer" value="$650" onclick=0>Option 1 Mark 1:$ 650</input></td>
+<td><input type="radio" name="answer1" value="twitter" onclick=0>Option 1 Mark 2:twitter</input></td>
+</tr>
+<tr>
+<td><input type="radio" name="answer" value="$550" onclick=0>Option 2 Mark 1:$ 550</input></td>
+<td><input type="radio" name="answer1" value="google" onclick=0>Option 2 Mark 2: google</input></td>
+</tr>
+<tr>
+<td><input type="radio" name="answer" value="$650" onclick=0>Option 3 Mark 1:$ 650</input></td>
+<td><input type="radio" name="answer1" value="facebook" onclick=0>Option 3 Mark 2: facebook</input</td>
+</tr>
+</table>
+</td>
+<td><p>Twitter wants more cash.The company anounnced two <mark id="m1">$___</mark> millions debts
+offering in a a filing today, each with potential $100 increase provided that sales are 
+oversubscribed.Assuming full tip, including the $100 million boosters <mark id="m2">___</mark> will raise
+upto $1.5 billion with two offerings.</p><br>
+<p>source:http://techcrunch.com/2014/09/10twitter-to-raise-up-to-1.5b-in-debt-offering/</p>
+</td>
+</tr>
+</table>
+<footer>
+<input type="button" value="Submit and Next Question" onclick="myFunc(this.form)"/>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="button" value="Cancel and Clear Selection"/>
+</footer>
+</form>
+<script>
+var ans;
+var ans2;
+var mr1;
+var mr2;
+function myFunc(form){
+	for(var i=0;i<4;i++){
+		if(document.getElementsByName("answer")[i].checked){
+			ans=document.getElementsByName("answer")[i].value;
+			document.getElementById("m1").innerHTML=ans;	
+		}
+		if(document.getElementsByName("answer1")[i].checked){
+			ans2=document.getElementsByName("answer1")[i].value;
+			document.getElementById("m2").innerHTML=ans2;
+		}
+			if(ans=='$650'&& ans2=="twitter"){
+				mr1='R';
+				mr2='R';
+				var queryParm=document.URL;
+				var qp=queryParm.split("?");
+				location.href="AudioVideoSCO.html?"+qp[1]+"&"+mr1+"^"+mr2;	
+			}else{
+				mr2='W';
+				mr2='W';
+				var queryParm=document.URL;
+				var qp=queryParm.split("?");
+				location.href="AudioVideoSCO.html?"+qp[1]+"&"+mr1+"^"+mr2;
+			}
+		}
+		
+		}
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<head>
+
+<meta charset="UTF-8">
+<title>Mark assignment</title>
+
+</head>
+<body onload="light()">
+<p> The stock quadrupled just the few months after its IPO,as investors have
+high expectations of the company to live up to. HowEver, investors are 
+especially antsy going into this report, seeing how the stock has lost more
+than half its value in the last few months alone.</p>
+
+<p>Revenues passed by expectations by a long shot.GoPro posted revenues of 
+<span >$ 633.9 millions, </span>compared to other
+consensus estimate of <span> $ 565 million.</span> </p>
+<script>
+function light()
+{
+var lis=document.getElementsByTagName('span');
+for(var i=0;i<lis.length;i++)
+{
+lis[i].style.backgroundColor="yellow";
+}    
+}
+</script>
+</body>
+</html>

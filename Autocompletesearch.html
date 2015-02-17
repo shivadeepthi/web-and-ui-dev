@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script> 
+<title>Auto complete search</title>
+</head>
+<body>
+<form action="">
+<input type="radio" name="List"  id="blist" value="booklist" >Book List</input>
+<input type="radio" name="List" id="slist" value="sclist">100 famous scientists</input>
+<br>
+<input type="text" id="input"></input>
+<input type="button" value="search" onclick="search()" >
+
+<p id="found"></p>
+<div >
+<ul id="books1">
+  <li><strong class="name">Implementing Analytics</strong></li>
+ <li ><strong class="name" >Visualizing Data</strong></li>
+  <li ><strong class="name">Data Mining Discovering and Visualizing Patterns with Python</strong></li>
+    <li ><strong class="name">Data Science for Business</strong></li>
+    <li><strong class="name">A Concise Guide to Compositional Data Analysis</strong></li>
+    <li  ><strong class="name">Alternative Methods of Regression</strong></li>
+    <li><strong class="name">How Algorithms Came to Rule Our World</strong></li>
+    <li ><strong class="name"> Machine Learning and Statistics, by Lion Solver</strong></li>
+    <li><strong class="name">Applied Data Science | Columbia University Course</strong></li>
+    <li><strong class="name">Analyzing the Analyzers</strong></li>
+    <li><strong class="name">Two books on programming interviews</strong></li>
+    <li><strong class="name">Forecasting: principles and practice</strong></li>
+    <li><strong class="name">Big Data Journal</strong></li>
+    <li><strong class="name">Three data science journals</strong></li>
+    <li><strong class="name">Practical Data Science with R</strong></li>
+    <li><strong class="name">Machine Learning plus Intelligent Optimization</strong></li>
+    <li><strong class="name">Advanced Database Marketing</strong></li>
+    <li><strong class="name">Predictive Analytics: Microsoft Excel</strong></li>
+    <li><strong class="name">Two new data science books from CRC Press</strong></li>
+   <li> <strong class="name">Delivering Business Analytics: Practical Guidelines for Best Practice</strong></li>
+    <li><strong class="name">Secrets of the Big Data Revolution</strong></li>
+    <li><strong class="name">My O'Reilly book collection</strong></li>
+    <li><strong class="name">I could not resist adding this book</strong></li>
+   <li> <strong class="name">Two new books on data analysis with open source</strong></li>
+   <li> <strong class="name">60 statistics textbooks</strong></li>
+  <li>  <strong class="name">5 books on data visualization</strong></li>
+  <li>  <strong class="name">Forbes' recommended list</strong></li>
+   <li> <strong class="name">Naked Statistics: Stripping the Dread from the Data</strong></li>
+   <li> <strong class="name">Business Analytics: A Practitioner's Guide</strong></li>
+  <li>  <strong class="name">SAS Books</strong></li>
+   <li><strong class="name"> A Practitioner's Guide to Business Analytics</strong></li>
+   <li> <strong class="name">Mining of Massive Data Sets</strong></li>
+    <li><strong class="name">Two interesting books</strong></li>
+   <li><strong class="name"> Hadoop in Practice</strong></li>
+   <li> <strong class="name">Improving Accuracy Through Combining Predictions</strong></li>
+    <li><strong class="name">30 statistics handbooks</strong></li>
+    <li><strong class="name">Causality</strong></li>
+   <li><strong class="name"> Handbook of Engineering Statistics</strong></li>
+    <li><strong class="name">16 books for statistical consultants</strong></li>
+   <li> <strong class="name">Three popular data mining books</strong></li> 
+   <li> <strong class="name">Statistics for Non-Statisticians</strong></li>
+   <li> <strong class="name">A few new books from the CRC Press</strong></li>
+   <li> <strong class="name">New journal: Decision Analytics</strong></li> 
+    <li><strong class="name">Machine Learning in Action</strong></li>
+  <li>  <strong class="name">Big Data - Principles and best practices of scalable realtime data ...</strong></li>
+   <li> <strong class="name">Handbook of Data Intensive Computing</strong></li>
+   <li><strong class="name"> Practical Text Mining and Statistical Analysis for Non-structured T...</strong></li>
+   <li> <strong class="name">New books on design of experiments (DOE)</strong></li>
+   <li> <strong class="name">Data Mining: Concepts and Techniques</strong></li>
+    <li><strong class="name">Keyword Intelligence: Keyword Research for Search, Social, and Beyond</strong></li>
+   <li><strong class="name"> Journal of Data Science</strong></li>
+    <li><strong class="name">Data Mining (Wiley / IEEE)</strong></li>
+   <li><strong class="name"> Big Data Now: Current Perspectives from O'Reilly Radar</strong></li>
+   <li><strong class="name"> Great statistics reference book covering a lot of topics</strong></li>
+   <li> <strong class="name">The R Journal</strong></li>
+  <li> <strong class="name"> Data Analysis with Open Source Tools</strong></li>
+   <li> <strong class="name">Competing on Analytics: The New Science of Winning</strong></li>
+   <li> <strong class="name">Presenting to Win: The Art of Telling Your Story</strong></li>
+   <li> <strong class="name">Information Visualization</strong></li>
+   <li> <strong class="name">Encyclopedia of Machine Learning</strong></li>
+   <li> <strong class="name">Analyzing Data from Facebook, Twitter, Linkedin, and Other Social M...</strong></li>
+    <li><strong class="name">Handbook of Natural Language Processing</strong></li>
+    <li><strong class="name">Mining of Massive Datasets (free)</strong></li>
+<li><strong class="name">Business Analytics for Managers</strong></li>
+<li><strong class="name">Handbook of Fitting Statistical Distributions with R (1,718 pages)</strong></li>
+<li><strong class="name">Data Mining Techniques in CRM: Inside Customer Segmentation</strong></li>
+<li><strong class="name">H10 new data mining books from IGI</strong></li>
+<li><strong class="name">Handbook of Statistical Analysis and Data Mining Applications</strong></li>
+  <li><strong class="name">I could not resist adding this book</strong></li>
+   <li> <strong class="name">Two new books on data analysis with open source</strong></li>
+   <li> <strong class="name">60 statistics textbooks</strong></li>
+  <li><strong class="name">  5 books on data visualization</strong></li>
+  <li>  <strong class="name">Forbes' recommended list</strong></li>
+   <li> <strong class="name">Naked Statistics: Stripping the Dread from the Data</strong></li>
+   <li><strong class="name"> Business Analytics: A Practitioner's Guide</strong></li>
+  <li> <strong class="name"> SAS Books</strong></li>
+   <li> <strong class="name">A Practitioner's Guide to Business Analytics</strong></li>
+   <li> <strong class="name">Mining of Massive Data Sets</strong></li>
+    <li><strong class="name">Two interesting books</strong></li>
+   <li> <strong class="name">Hadoop in Practice</strong></li>
+   <li> <strong class="name">Improving Accuracy Through Combining Predictions</strong></li> 
+    <li><strong class="name">30 statistics handbooks</strong></li>
+    <li><strong class="name">Causality</strong></li>
+   <li> <strong class="name">Handbook of Engineering Statistics</strong></li>
+    <li><strong class="name">16 books for statistical consultants</strong></li>
+   <li><strong class="name"> Three popular data mining books</strong></li> 
+   <li> <strong class="name">Statistics for Non-Statisticians</strong></li>
+   <li> <strong class="name">A few new books from the CRC Press</strong></li>
+   <li> <strong class="name">New journal: Decision Analytics</strong></li> 
+    <li><strong class="name">Machine Learning in Action</strong></li>
+  <li>  <strong class="name">Big Data - Principles and best practices of scalable realtime data ...</strong></li>
+   <li> <strong class="name">Handbook of Data Intensive Computing</strong></li>
+   <li> <strong class="name">Practical Text Mining and Statistical Analysis for Non-structured T...</strong></li>
+   <li><strong class="name"> New books on design of experiments (DOE)</strong></li>
+   <li> <strong class="name">Data Mining: Concepts and Techniques</strong></li>
+    <li><strong class="name">Keyword Intelligence: Keyword Research for Search, Social, and Beyond</strong></li>
+   <li><strong class="name"> Journal of Data Science</strong></li>
+    <li><strong class="name">Data Mining (Wiley / IEEE)</strong></li>
+   <li> <strong class="name">Big Data Now: Current Perspectives from O'Reilly Radar</strong></li>
+   <li> <strong class="name">Great statistics reference book covering a lot of topics</strong></li>
+   <li><strong class="name"> The R Journal</strong></li>
+</ul>
+</div>
+
+<div>
+<ul id="slist1" >
+<li><strong class="name">Isaac Newton</strong> </li>
+<li><strong class="name">Albert Einstein</strong></li>
+<li><strong class="name">Neils Bohr</strong></li>
+<li><strong class="name">Charles Darwin </strong></li>
+<li><strong class="name"> Louis Pasteur</strong></li>
+<li><strong class="name">Sigmund Freud </strong></li>
+<li><strong class="name"> Galileo Galilei </strong></li>
+<li><strong class="name">Antoine Laurent Lavoisier</strong></li>
+<li><strong class="name">Johannes Kepler</strong></li>
+<li><strong class="name"> Nicolaus Copernicus</strong></li>
+<li><strong class="name">Michael Faraday</strong> </li>
+<li><strong class="name">James Clerk Maxwell </strong></li>
+<li><strong class="name">	Claude Bernard </strong></li>
+<li>	<strong class="name">Franz Boas </strong></li>
+<li><strong class="name">Werner Heisenberg</strong> </li>
+<li>	<strong class="name">Linus Pauling </strong></li>
+<li><strong class="name">Rudolf Virchow </strong></li>
+<li><strong class="name">Erwin Schrodinger</strong></li>
+<li><strong class="name">Ernest Rutherford</strong> </li>
+<li><strong class="name">Paul Dirac</strong> </li>
+<li><strong class="name">Andreas Vesalius </strong></li>
+<li><strong class="name">Tycho Brahe </strong></li>
+<li><strong class="name">Comte de Buffon </strong></li>
+<li><strong class="name">	Max Planck</strong></li>
+<li><strong class="name">Marie Curie </strong></li>
+<li><strong class="name">William Herschel </strong></li>
+<li><strong class="name">Charles Lyell</strong> </li>
+<li><strong class="name">Pierre Simon de Laplace </strong></li>
+<li><strong class="name">Edwin Hubble</strong></li>
+<li><strong class="name">Joseph J. Thomson </strong></li>
+<li><strong class="name">	Max Born</strong> </li>
+<li><strong class="name">Francis Crick </strong></li>
+<li><strong class="name">Enrico Fermi</strong> </li>
+<li><strong class="name">	Leonard Euler </strong></li>
+<li><strong class="name">Justus Liebig </strong>	</li>
+<li><strong class="name">Arthur Eddington </strong></li>
+<li><strong class="name">William Harvey </strong></li>
+<li><strong class="name">Marcello Malpighi</strong> </li>
+<li><strong class="name">Christiaan Huygens 	</strong></li>
+<li><strong class="name">	Carl Gauss (Karl Friedrich Gauss)</strong> </li>
+<li><strong class="name">	Albrecht von Haller</strong> </li>
+<li><strong class="name"> August Kekule </strong></li>
+<li><strong class="name">	Robert Koch </strong></li>
+<li><strong class="name">Murray Gell-Mann </strong></li>
+<li><strong class="name">	Emil Fischer</strong> </li>
+<li><strong class="name">Dmitri Mendeleev </strong>	</li>
+<li><strong class="name">Sheldon Glashow 	</strong></li>
+<li><strong class="name">James Watson 	</strong></li>
+<li><strong class="name">John Bardeen 	</strong></li>
+<li><strong class="name">John von Neumann </strong></li>
+<li><strong class="name">Richard Feynman </strong></li>
+<li><strong class="name">	Alfred Wegener </strong></li>
+<li><strong class="name">Stephen Hawking </strong></li>
+<li><strong class="name">Anton van Leeuwenhoek </strong></li>
+<li><strong class="name">	Max von Laue 	</strong></li>
+<li><strong class="name">Gustav Kirchhoff</strong> </li>
+<li><strong class="name">Hans Bethe 	</strong></li>
+<li><strong class="name">Euclid 	</strong></li>
+<li><strong class="name">Gregor Mendel </strong>	</li>
+<li><strong class="name">Heike Kamerlingh </strong></li>
+<li><strong class="name">Thomas Hunt Morgan 	</strong></li>
+<li><strong class="name">Hermann von Helmholtz </strong></li>
+<li><strong class="name">	Paul Ehrlich </strong></li>
+<li><strong class="name">Ernst Mayr</strong> </li>
+<li><strong class="name">	Charles Sherrington </strong></li>
+<li><strong class="name">Theodosius Dobzhansky </strong>	</li>
+<li><strong class="name">Max Delbruck 	</strong></li>
+<li><strong class="name">Jean Baptiste Lamarck </strong>	</li>
+<li><strong class="name">William Bayliss 	</strong></li>
+<li><strong class="name">Noam Chomsky</strong> </li>
+<li><strong class="name">	Frederick Sanger </strong></li>
+<li><strong class="name">	Lucretius 	</strong></li>
+<li><strong class="name">John Dalton </strong>	</li>
+<li><strong class="name">	Louis Victor de Broglie </strong></li>
+<li><strong class="name">Carl Linnaeus</strong> </li>
+<li><strong class="name"> Jean Piaget </strong></li>
+<li><strong class="name">	George Gaylord Simpson</strong> </li>
+<li><strong class="name">Claude Levi-Strauss</strong> </li>
+<li> <strong class="name">Lynn Margulis </strong></li>
+<li><strong class="name">Karl Landsteiner </strong></li>
+<li><strong class="name">Konrad Lorenz </strong></li>
+<li><strong class="name">Edward O. Wilson </strong></li>
+<li><strong class="name">Frederick Gowland Hopkins</strong> </li>
+<li><strong class="name">Gertrude Belle Elion</strong> </li>
+<li><strong class="name">Hans Selye </strong></li>
+<li><strong class="name">	J. Robert Oppenheimer </strong>	</li>
+<li><strong class="name">Edward Teller </strong></li>
+<li><strong class="name">	Willard Libby 	</strong></li>
+<li><strong class="name">Ernst Haeckel </strong></li>
+<li><strong class="name">	Jonas Salk</strong> </li>
+<li><strong class="name">Emil Kraepelin 	</strong></li>
+<li><strong class="name">Trofim Lysenko 	</strong></li>
+<li><strong class="name">	Francis Galton </strong>	</li>
+<li><strong class="name">	Alfred Binet 	</strong></li>
+<li><strong class="name">Alfred Kinsey </strong></li>
+<li><strong class="name">Alexander Fleming </strong></li>
+<li><strong class="name">B. F. Skinner </strong></li>
+<li><strong class="name">Wilhelm Wundt </strong></li>
+<li><strong class="name">Archimedes </strong></li>
+</ul>
+</div>
+</form>
+<script>
+$("#books1").hide();
+$("#slist1").hide();
+$("input[type='radio']").change(function () {
+    if ($(this).val() == "booklist") {
+        $("#books1").show();
+    } else 
+    	if($(this).val()=="sclist"){
+    		$("#slist1").show();
+    	}
+});
+</script>
+<script>
+var input = document.getElementById('input');
+input.onkeyup = function () {
+    var filter = input.value.toUpperCase();
+    var lis = document.getElementsByTagName('li');
+    for (var i = 0; i < lis.length; i++) {
+        var name = lis[i].getElementsByClassName('name')[0].innerHTML;
+        if (name.toUpperCase().indexOf(filter) == 0) 
+            lis[i].style.display = 'list-item';
+        
+        else
+            lis[i].style.display = 'none';
+    }
+}
+</script>
+<script>
+function search(){
+	var word=document.getElementById('input').value;
+	var lis=document.getElementsByTagName('li');
+	for(var i=0;i<lis.length;i++){
+		var name=lis[i].getElementsByClassName('name')[0].innerHTML;
+		if(name.substr(1,9)==word){
+			document.getElementById('found').innerHTML=word+"  not found";
+		}else
+			document.getElementById('found').innerHTML=word+"  found";
+	}	
+}
+</script>
+</body>
+</html>

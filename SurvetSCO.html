@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Survey SCO</title>
+<header align="center">Survey SCO</header>
+</head>
+<body>
+<form>
+<p>How did you like the center?</p>
+<p>Comments :<textarea rows="5" cols="70" autofocus></textarea></p><br>
+<p>Select Test Area Location</p><br>
+<select size="3" name="selection field" mutiple="no">
+<option value="San jose">San jose</option>
+<option value="San Fransisco">San Fransisco</option>
+<option value="Mountain View">Mountain View</option>
+<option value="Palo Alto">Palo Alto</option>
+<option value="Santa clara">Santa clara</option>
+<option value="Sunnyvale">Sunnyvale</option>
+</select>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<select size="3" name="selection field" mutiple="no">
+<option value="Room No 111">Room No 111</option>
+<option value="Room No 112">Room No 112</option>
+<option value="Room No 113">Room No 113</option>
+<option value="Room No 114">Room No 114</option>
+<option value="Room No 115">Room No 115</option>
+<option value="Room No 116">Room No 116</option>
+</select><br> <br>
+<footer>
+<input type="button" value="Submit and Next Question" onclick="myFunc(this.form)"/>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="button" value="Cancel and Clear Selection" onclick="myFunc(this.form)"/>
+</footer>
+</form>
+<script>
+function myFunc(form){
+	var queryParm=document.URL;
+	var qp=queryParm.split("?");
+	location.href="SummaryPage.html?"+qp[1];
+}
+</script>
+</body>
+</html>
